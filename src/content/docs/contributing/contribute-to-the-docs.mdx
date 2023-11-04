@@ -1,0 +1,39 @@
+---
+title: Contributing to the docs
+description: Help improve our documentation by writing to the docs.
+---
+
+import {Author} from '../../../components/Author';
+
+<Author author="Tommerty"/>
+
+---
+
+# Updating an existing article
+If you spot a typo, want to add additional information, or want to update an article to reflect a new feature, you can do so by clicking the "**Edit page**" link at the bottom of the article. It's available on every page of the docs. This will take you to the GitHub repository where the docs are stored. You can then make your changes and submit a pull request, in which we'll review your changes and merge them into the docs once approved. We may ask you to make some changes before we merge your pull request!
+
+If you contribute to the docs, we'll add your GitHub to the article at the bottom to say thanks for contributing!
+
+# Writing a new article
+If you wish to write a new article, it's best to head over to [GitHub](https://github.com/gezelio/docs.doras.to) and create a new branch. To then create your new article:
+
+1.  Head over to `src/content/docs` and you can see folders, such as `getting-started` and `api`. These are the categories that the articles are sorted into. If you wish to create a new category, you can do so by creating a new folder. If you wish to add an article to an existing category, you can do so by creating a new file in the category folder.
+
+2. Create your file in the following format: `my-new-article.mdx`. The `.mdx` extension is important, as it tells the docs that it's a markdown file. What you place before the `.mdx` will be the URL of the article. For example, if you create a file called `my-new-article.mdx` in the `getting-started` folder, the URL will be `https://docs.doras.to/getting-started/my-new-article`.
+
+3. Start off your article with the following:
+
+```
+---
+title: Title of my article
+description: A short description of my article
+---
+
+import {Author} from '../../../components/Author';
+
+<Author author="community"/>
+
+---
+```
+
+If you wish to add yourself as the author instead of "community", you can do so by replacing `community` with your GitHub username. For example, if I wanted to add myself as the author, I would replace `community` with `Tommerty`.

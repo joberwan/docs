@@ -4,6 +4,7 @@ description: Help improve our documentation by writing to the docs.
 ---
 
 import {Author} from '../../../components/Author';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 <Author author="Tommerty"/>
 
@@ -14,14 +15,19 @@ If you spot a typo, want to add additional information, or want to update an art
 
 If you contribute to the docs, we'll add your GitHub to the article at the bottom to say thanks for contributing!
 
+---
+
 # Writing a new article
 If you wish to write a new article, it's best to head over to [GitHub](https://github.com/gezelio/docs.doras.to) and create a new branch. To then create your new article:
 
-1.  Head over to `src/content/docs` and you can see folders, such as `getting-started` and `api`. These are the categories that the articles are sorted into. If you wish to create a new category, you can do so by creating a new folder. If you wish to add an article to an existing category, you can do so by creating a new file in the category folder.
+#### Step 1
+Head over to `src/content/docs` and you can see folders, such as `getting-started` and `api`. These are the categories that the articles are sorted into. If you wish to create a new category, you can do so by creating a new folder. If you wish to add an article to an existing category, you can do so by creating a new file in the category folder.
 
-2. Create your file in the following format: `my-new-article.mdx`. The `.mdx` extension is important, as it tells the docs that it's a markdown file. What you place before the `.mdx` will be the URL of the article. For example, if you create a file called `my-new-article.mdx` in the `getting-started` folder, the URL will be `https://docs.doras.to/getting-started/my-new-article`.
+#### Step 2
+Create your file in the following format: `my-new-article.mdx`. The `.mdx` extension is important, as it tells the docs that it's a markdown file. What you place before the `.mdx` will be the URL of the article. For example, if you create a file called `my-new-article.mdx` in the `getting-started` folder, the URL will be `https://docs.doras.to/getting-started/my-new-article`.
 
-3. Start off your article with the following:
+#### Step 3
+Start off your article by copy/pasting the following code into the top of your article:
 
 ```
 ---
@@ -34,6 +40,46 @@ import {Author} from '../../../components/Author';
 <Author author="community"/>
 
 ---
+{/* WRITE YOUR ARTICLE BELOW THIS */}
+
+# Title of my article
+
+My article content goes here.
+
+{/* END OF ARTICLE. PLEASE DON'T EDIT BELOW THIS LINE */}
+---
+Thank you to our contributors
+<iframe src="https://github.com/gezelio/docs.doras.to/graphs/contributors-widget?width=500&height=200&background=none" width="500" height="200" frameborder="0"></iframe>
 ```
 
-If you wish to add yourself as the author instead of "community", you can do so by replacing `community` with your GitHub username. For example, if I wanted to add myself as the author, I would replace `community` with `Tommerty`.
+:::note[Why "community"?]
+In the future we'll be opening up the Doras API for you to enter your Doras username, so that we can display your profile picture and username on the article. For now, you can have to use `community` as the author, but you'll still be credited for your contribution! Please just remember to leave your Doras username in the pull request so we can add you to the article 😊
+:::
+
+#### Step 4
+Write your article below the `WRITE YOUR ARTICLE BELOW THIS` comment. You can use markdown to format your article. Our docs uses Astro Starlight, so if you're curious on how to style and write your article, you can check out their documentation which I'll link below.
+
+
+<CardGrid>
+	<LinkCard title="Formatting Markdown" href="https://starlight.astro.build/guides/authoring-content/" />
+	<LinkCard title="Starlight Components (advanced users only)" href="https://starlight.astro.build/guides/components/" />
+</CardGrid>
+
+#### Step 5
+:::note[Optional]
+The following step is optional and if you're not confident to do it, just let us know when you submit your PR!
+:::
+
+
+We'll need to then add your new article to the sidebar, as this doesn't happen automatically. To do this, head over to [astro.config.mjs](https://github.com/gezelio/docs.doras.to/blob/master/astro.config.mjs) and under `sidebar` and sort your article into the correct category. For example, if you created a new article in the `getting-started` folder, you'd add it under this, following the existing formatting.
+
+#### Step 6
+Once you're done, you can submit a pull request and we'll review your article. We may ask you to make some changes before we merge your pull request, but if there's any quick problems we can quickly solve, we'll do so ourselves to save you the hassle and get your article out there!
+
+### Important to know...
+You can always take a look at existing articles to see how they're formatted. If you're unsure about anything, feel free to ask in our [Discord](https://gezel.io/discord) or [open an issue on GitHub](https://github.com/gezelio/docs.doras.to/issues) and we'll be happy to help!
+
+---
+#### Thank you to our contributors
+<iframe src="https://github.com/gezelio/docs.doras.to/graphs/contributors-widget?width=500&height=200&background=none" width="500" height="200" frameborder="0">
+</iframe>

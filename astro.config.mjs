@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [starlight({
     title: 'Doras.to',
     editLink: {
-      baseUrl: 'https://github.com/gezelio/docs.doras.to/edit/main/',
+      baseUrl: 'https://github.com/gezelio/docs.doras.to/edit/master/',
     },
     social: {
       github: 'https://github.com/gezelio/docs.doras.to'

@@ -1,36 +1,31 @@
 ---
-title: Welcome to Starlight
+title: Doras Docs
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: For help with all things Doras
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/favicon.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Go to the docs
+      link: /guides/getting-started/
       icon: right-arrow
       variant: primary
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Head to Doras
+      link: https://doras.to
       icon: external
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
-
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Search is your friend" icon="magnifier">
+		The searchbox is the best place to find anything. It's quick, powerful, and will help you find what you need.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Community Driven Documentation" icon="github">
+		The docs are written by the community, and validated by the community & administration to ensure integrity. Want to contribute? [Learn how](/contributing/contribute-to-the-docs/).
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Join the community" icon="discord">
+		We have an active community to ask any questions the docs might not answer! Head over [to our Discord](https://gezel.io/discord) and ask away!
 	</Card>
 </CardGrid>

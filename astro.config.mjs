@@ -10,23 +10,23 @@ export default defineConfig({
   integrations: [starlight({
     title: 'Doras.to',
     editLink: {
-      baseUrl: 'https://github.com/gezelio/docs.doras.to/edit/master/',
+      baseUrl: 'https://github.com/doras-to/docs/edit/master/',
     },
     social: {
-      github: 'https://github.com/gezelio/docs.doras.to'
+      github: 'https://github.com/doras-to/docs'
     },
     sidebar: [{
       label: 'Guides',
       items: [
         // Each item here is one entry in the navigation menu.
         {
-          label: 'Example Guide',
-          link: '/guides/example/'
+          label: 'Getting Started',
+          link: '/guides/getting-started/'
         }]
     }, {
-      label: 'Reference',
+      label: 'Contributing',
       autogenerate: {
-        directory: 'reference'
+        directory: 'contributing',
       }
     }]
   }), react(), tailwind()]

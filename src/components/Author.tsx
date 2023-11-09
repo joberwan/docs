@@ -6,7 +6,7 @@ let load = false
 export function Author({ author }: AuthorProps) {
   const [user, SetUser] = React.useState<any>()
   if (!load) {
-    fetch(`https://app.doras.to/api/${author}`, {
+    fetch(`https://landing.doras.to/api/get/${author}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

@@ -22,6 +22,10 @@ export default defineConfig({
         {
           label: 'Getting Started',
           link: '/guides/getting-started/'
+        },
+        {
+          label: 'Migrating from Mystlink',
+          link: '/mystlink/waitlist/'
         }]
     }, {
       label: 'Contributing',

@@ -15,23 +15,34 @@ export default defineConfig({
     social: {
       github: 'https://github.com/doras-to/docs'
     },
-    sidebar: [{
-      label: 'Guides',
-      items: [
-        // Each item here is one entry in the navigation menu.
-        {
-          label: 'Getting Started',
-          link: '/guides/getting-started/'
-        },
-        {
-          label: 'Migrating from Mystlink',
-          link: '/mystlink/waitlist/'
-        }]
-    }, {
-      label: 'Contributing',
-      autogenerate: {
-        directory: 'contributing',
-      }
-    }]
+    sidebar: [
+      {
+        label: 'Guides',
+        items: [
+          // Each item here is one entry in the navigation menu.
+          {
+            label: 'Getting Started',
+            link: '/guides/getting-started/'
+          },
+          {
+            label: 'Migrating from Mystlink',
+            link: '/mystlink/waitlist/'
+          }]
+      },
+      {
+        label: 'Core Features',
+        items: [
+          {
+            label: 'Understanding Links',
+            link: '/links'
+          },
+        ]
+      },
+      {
+        label: 'Contributing',
+        autogenerate: {
+          directory: 'contributing',
+        }
+      }]
   }), react(), tailwind()]
 });

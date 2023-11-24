@@ -1,0 +1,26 @@
+---
+title: Understanding Links
+description: See what links you can add to your Link in Bio
+---
+
+import {Author} from '../../components/Author';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<Author client:only author="tommerty" />
+
+Links are a fundamental part of a Link in Bio page, it's literally what they're for. They are the building blocks of your page and allow you to link to any URL you want. There however some warnings your users may face when clicking on a link, depending on it's destination.
+
+## Warnings
+As mentioned, there can be warnings depending on the link you user goes to. These warnings are either "18+ content warnings" or "unverified links".
+
+### 18+ Content Warnings
+We've created a list of websites that we believe contain 18+ content. If your link goes to one of these websites, your user will be presented with a warning before they can continue to the website. This is to ensure that your users are aware of the content they are about to see. These cannot be toggled off.
+
+You can manually add this warning to your links page to avoid any problems. To do this, click the padlock icon on the link you want to add the warning to. This will add the warning to the link and will be shown to your users.
+
+### Unverified Links
+Unverified links are a list of links we've not manually checked or added to our verified list. We will have the full list of verified links visible in the future, and ways you can request your link to be verified. For now, if your link is not verified, your users will be presented with a warning before they can continue to the website. This is to help prevent spam/scam and other dangerous links in the future. We want to keep the community safe, and feel like this is the best process. It will be very simple to request a specific link to be verified in the future, directly from the website. 
+
+---
+
+We'll share updates when the list is fully visible, as well as ways for you to request other links. Once verified, it'll no longer show the warning. It will also count for the entire domain, so if we create a verified link for `https://example.com`, all links that go to `https://example.com` like `https://example.com/page` will be verified, etc. So by requesting the domain, you'll be doing the entire community a favour.

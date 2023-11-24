@@ -18,7 +18,7 @@ export function Author({ author }: AuthorProps) {
   }
   load = true
   if (!user) {
-    return <div>Author not found</div>;
+    return <div>Loading....</div>;
   }
   return (
     <div>

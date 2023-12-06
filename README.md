@@ -4,7 +4,5 @@
 
 The official docs for Doras.to - Powered by our community and staff.
 
+### Contributing
 Planning on contributing? Check out [this article first!](https://docs.doras.to/contributing/contribute-to-the-docs#writing-a-new-article)
-
----
-*We'll update this readme in more detail at a later date*
